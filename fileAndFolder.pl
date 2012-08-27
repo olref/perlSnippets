@@ -27,3 +27,8 @@ sub lsFolderRecursive {
 
 #sort files by name (lowercase)
 @files = sort { lc $a cmp lc $b } @files;
+
+
+#get filename and extension (official documentation example)
+use File::Basename;
+my ($filename, $directories, $suffix) = fileparse("/foo/bar/baz.txt", qr/\.[^.]*/);
