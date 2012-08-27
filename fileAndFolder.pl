@@ -23,3 +23,7 @@ sub lsFolderRecursive {
         }
     }
 }
+
+
+#sort files by name (lowercase)
+@files = sort { lc $a cmp lc $b } @files;
