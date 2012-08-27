@@ -19,3 +19,7 @@ my $select  = "SELECT blablabalbalbaabl";
 my $sth = $dbh->prepare($select);
 $sth->execute();
 my $ref = $sth->fetchrow_hashref();
+
+
+#disconnection
+$dbh->disconnect();
